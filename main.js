@@ -6,6 +6,7 @@ var app = new Vue({
     inStock: false,
     onSale: true,
     details: ["80% cotton", "20% polyester", "Gender-neutral"],
+    sizes: ["Small", "Meduim", "Large", "Extra Large"],
     variants: [
       {
         variantId: 2234,
