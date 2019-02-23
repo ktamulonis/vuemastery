@@ -38,9 +38,12 @@
               @mouseover="updateProduct(variant.variantImage)">
           </div>
 
-        <button v-on:click= "addToCart">Cart +</button>
+        <button v-on:click= "addToCart" 
+          :disabled="!inStock"
+          :class="{ disabledButton: !inStock  }">Cart +</button>
 
-        <button v-on:click= "removeFromCart">Cart -</button>
+        <button v-show='cart > 0' v-on:click= "removeFromCart"
+          :disabled= 'cart == 0' >Cart -</button>
        
         <div class="cart">
           <p>Cart({{cart}})</p>
