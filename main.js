@@ -85,7 +85,7 @@ Vue.component('product', {
       this.$emit('add-to-cart')
     },
     removeFromCart() {
-      this.cart -= 1
+      this.$emit('remove-from-cart')
     },
     updateProduct(index) {
       this.selectedVariant = index
@@ -120,6 +120,9 @@ var app = new Vue({
   methods: {
     updateCart() {
       this.cart += 1
+    },
+    removeFromCart() {
+      this.cart -= 1
     }
   }
 }) 
