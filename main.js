@@ -1,3 +1,15 @@
+
+Vue.component('product details', {
+  props: {
+    details: {
+    }
+  },
+  template: `
+     <ul> 
+       <li v-for="detail in details">{{ detail }}</li>
+     </ul>
+  `
+}),
 Vue.component('product', {
   props: {
     premium: {
@@ -21,8 +33,6 @@ Vue.component('product', {
         <ul>
           <li v-for="detail in details">{{ detail }}</li>
         </ul>
-
-
         <ul>
           <li v-for="size in sizes">{{ size }}</li>
         </ul>
